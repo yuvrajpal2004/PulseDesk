@@ -1,0 +1,19 @@
+#spring.application.name=Project
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3307/pulsedesk
+    username: root
+    password: root1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  application:
+    name: pulsedesk
+
+server:
+  port: 8080

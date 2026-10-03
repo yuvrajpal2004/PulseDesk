@@ -1,0 +1,21 @@
+services:
+
+  mysql:
+    image: mysql:8
+    container_name: pulsedesk-mysql
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_DATABASE: pulsedesk
+      MYSQL_ROOT_PASSWORD: root1234
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  redis:
+    image: redis:7
+    container_name: pulsedesk-redis
+    ports:
+      - "6379:6379"
+
+volumes:
+  mysql_data:
